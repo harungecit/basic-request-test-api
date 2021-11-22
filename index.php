@@ -1,7 +1,7 @@
 <?php
 
 $rand = rand(9, 51);
-for($s=$rand, $s<$rand+1;$s++){
+for($s=$rand; $s<$rand+1;$s++){
     $sec = date('s');
 }
 echo date('s');
