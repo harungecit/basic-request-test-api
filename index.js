@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
   
       }
       while(i > date.getHours() + i);
-        res.json({usd: val.pad(6)});
+        res.json({usd: val});
       //  increment the counter
       if (i > date.getHours() + i) {           //  if the counter < 10, call the loop function
         program();             //  ..  again which will trigger another 
