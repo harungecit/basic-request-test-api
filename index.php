@@ -1,7 +1,7 @@
 <?php
 //include('connection.php');
 $dateTime = new DateTime('now', new DateTimeZone('America/New_York')); 
-$date = $dateTime->format("H");
+echo $date = $dateTime->format("H");
 $randSecond = rand(10, 50);
 $usd1 = rand(15,25);
 $usd2 = rand(30,50);
