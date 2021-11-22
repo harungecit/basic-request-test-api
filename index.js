@@ -10,6 +10,14 @@ function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
+function padLeadingZeros(num, size) {
+  var s = num+"";
+  while (s.length < size) s = "0" + s;
+  return s;
+}
+
+ 
+
 app.use(cors());
 app.get('/', (req, res) => {
 
@@ -31,7 +39,8 @@ app.get('/', (req, res) => {
   
       }
       while(i > date.getHours() + i);
-        res.json({usd: val});
+    
+        res.json({usd: padLeadingZeros(val, 6)});
       //  increment the counter
       if (i > date.getHours() + i) {           //  if the counter < 10, call the loop function
         program();             //  ..  again which will trigger another 
