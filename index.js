@@ -1,5 +1,5 @@
 const express = require('express');
-var sleep = require('system-sleep');
+var cors = require("cors");
 const app = express();
 const date = new Date();
 let val = 55482;
@@ -10,6 +10,7 @@ function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
+app.use(cors());
 app.get('/', (req, res) => {
 
   function program() {         //  create a loop function
