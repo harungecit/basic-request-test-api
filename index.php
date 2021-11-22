@@ -1,11 +1,16 @@
 <?php
 
-$rand = rand(40, 70);
+$rand = rand(9, 51);
+for($s=$rand, $s<$rand+1;$s++){
+    $sec = date('s');
+}
+echo date('s');
+
         $data = [];
         for($i=0; $i<10;$i++){
             $data[$i] = $rand;
         }
-      echo json_encode($data);
+     // echo json_encode($data);
 
 /*
 
