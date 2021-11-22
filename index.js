@@ -54,7 +54,7 @@ app.get('/', (req, res) => {
       if (i > date.getHours() + i) {
         program(); 
       }    
-    }, 3500)
+    }, 5000)
   }
   
   program(); 
