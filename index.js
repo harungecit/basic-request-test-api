@@ -28,11 +28,11 @@ app.get('/', (req, res) => {
       do{
         if(date.getHours() >= 7 && date.getHours() < 19){
           //gündüz
-          val += randomIntFromInterval(10, 15);
+          val += randomIntFromInterval(1, 6);
         }
         else{
           //gece
-          val += randomIntFromInterval(15, 20);
+          val += randomIntFromInterval(6, 11);
         }
         
         i++
