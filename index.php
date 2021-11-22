@@ -5,7 +5,7 @@ $rand = rand(40, 70);
         for($i=0; $i<10;$i++){
             $data[$i] = $rand;
         }
-        json_encode($data);
+      echo json_encode($data);
 
 /*
 
