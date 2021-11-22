@@ -2,7 +2,7 @@ const express = require('express');
 var cors = require("cors");
 const app = express();
 const date = new Date();
-let val = 55482;
+let val = 102000;
 let i=1;
 const PORT = process.env.PORT || 3000
 
@@ -19,11 +19,11 @@ app.get('/', (req, res) => {
       do{
         if(date.getHours() >= 7 && date.getHours() < 19){
           //gündüz
-          val += randomIntFromInterval(15, 25);
+          val += randomIntFromInterval(10, 20);
         }
         else{
           //gece
-          val += randomIntFromInterval(30, 50);
+          val += randomIntFromInterval(20, 40);
         }
         
         i++
