@@ -2,7 +2,7 @@ const express = require('express');
 var sleep = require('system-sleep');
 const app = express();
 const date = new Date();
-let val = 0;
+let val = 55482;
 let i=1;
 const PORT = process.env.PORT || 3000
 
