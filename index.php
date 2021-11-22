@@ -1,10 +1,23 @@
 <?php
 
-$rand = rand(9, 51);
-for($s=$rand; $s<$rand+1;$s++){
-    $sec = date('s');
+$dateTime = new DateTime('now', new DateTimeZone('America/New_York')); 
+echo $date = $dateTime->format("H");
+$rand = rand(10, 50);
+$usd1 = rand(15,25);
+$usd2 = rand(30,50);
+
+for($s=1; $s<=$rand;$s++){
+    if($date > 7  && $date < 19){
+        //gündüz
+
+    }
+    else{
+        //gece
+
+    }
+
+    echo json_encode($data);
 }
-echo date('s');
 
         $data = [];
         for($i=0; $i<10;$i++){
@@ -25,7 +38,7 @@ if(isset($_POST)){
     else{
         $data = 'Unauthorized token';
     }phpserver.browser
-    json_encode($data);
+    
 }
 */
 ?>
