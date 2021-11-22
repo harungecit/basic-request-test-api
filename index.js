@@ -38,12 +38,12 @@ app.get('/', (req, res) => {
         i++
   
       }
-      while(i < date.getTime());
+      while(i > date.getHours() + i);
       
       res.json({usd: padLeadingZeros(val, 6)});
       
      
-      if ((i < date.getTime()) {
+      if (i > date.getHours() + i) {
         program(); 
       }    
       
