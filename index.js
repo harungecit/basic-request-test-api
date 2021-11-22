@@ -25,15 +25,6 @@ app.get('/', (req, res) => {
   function program() { 
     setTimeout(function() {
       
-      if(date.getHours() >= 7 && date.getHours() < 19){
-        //gündüz
-        val += randomIntFromInterval(15, 20);
-      }
-      else{
-        //gece
-        val += randomIntFromInterval(20, 30);
-      }
-      /* 
       do{
         if(date.getHours() >= 7 && date.getHours() < 19){
           //gündüz
@@ -48,15 +39,15 @@ app.get('/', (req, res) => {
   
       }
       while(i > date.getHours() + i);
-      */
+      
       res.json({usd: padLeadingZeros(val, 6)});
-      program();
-      /*
+      
+     
       if (i > date.getHours() + i) {
         program(); 
       }    
-      */
-    }, 5000)
+      
+    }, 8500)
   }
   
   program(); 
