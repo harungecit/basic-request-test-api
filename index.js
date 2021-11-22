@@ -2,7 +2,7 @@ const express = require('express');
 var cors = require("cors");
 const app = express();
 const date = new Date();
-let val = 102000;
+let val = 101400;
 let i=1;
 const PORT = process.env.PORT || 3000
 
@@ -12,6 +12,7 @@ function randomIntFromInterval(min, max) {
 
 app.use(cors());
 app.get('/', (req, res) => {
+
 
   function program() {         //  create a loop function
     setTimeout(function() {   //  call a 3s setTimeout when the loop is called
@@ -23,7 +24,7 @@ app.get('/', (req, res) => {
         }
         else{
           //gece
-          val += randomIntFromInterval(20, 40);
+          val += randomIntFromInterval(20, 30);
         }
         
         i++
@@ -35,7 +36,7 @@ app.get('/', (req, res) => {
       if (i > date.getHours() + i) {           //  if the counter < 10, call the loop function
         program();             //  ..  again which will trigger another 
       }                       //  ..  setTimeout()
-    }, 10000)
+    }, 8000)
   }
   
   program(); 
