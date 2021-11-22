@@ -4,7 +4,8 @@ $dateTime = new DateTime('now', new DateTimeZone('America/New_York'));
 $date = $dateTime->format("H");
 $randSecond = rand(10, 50);
 $data = [];
-for($s=$randSecond-1; $s<=$randSecond;$s++){
+
+for($s=$randSecond-1; $s<$randSecond;$s++){
     if($date > 7  && $date < 19){
         //gündüz
         $data[$s] = rand(15,25) + ($randSecond / 10);
@@ -39,5 +40,6 @@ if(isset($_POST)){
 else{
     echo 'Token required';
 }
+
 */
 ?>
