@@ -7,7 +7,7 @@ $rand = rand(40, 70);
         }
         json_encode($data);
 
-        die();
+/*
 
 if(isset($_POST)){
     if($_POST['auth_token'] == '9f09347cbce52e00fa72dba1ba53df93'){
@@ -22,4 +22,5 @@ if(isset($_POST)){
     }
     json_encode($data);
 }
+*/
 ?>
