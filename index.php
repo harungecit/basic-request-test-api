@@ -19,7 +19,7 @@ if(isset($_POST)){
     }
     else{
         $data = 'Unauthorized token';
-    }
+    }phpserver.browser
     json_encode($data);
 }
 */
