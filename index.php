@@ -1,15 +1,15 @@
 <?php
 //include('connection.php');
 $dateTime = new DateTime('now', new DateTimeZone('America/New_York')); 
-echo $date = $dateTime->format("H");
+$date = $dateTime->format("H");
 $randSecond = rand(10, 50);
 $usd1 = rand(15,25);
 $usd2 = rand(30,50);
-$data = [];
+$data = null;
 for($s=1; $s<=$randSecond;$s++){
     if($date > 7  && $date < 19){
         //gündüz
-        $data[$randSecond] = $usd1 + ($randSecond / 10);
+        $data = $usd1 + ($randSecond / 10);
 
         /*
         $list=[$username,$adddate,$saves];
@@ -20,7 +20,7 @@ for($s=1; $s<=$randSecond;$s++){
     }
     else{
         //gece
-        $data[$randSecond] = $usd2 + ($randSecond / 10);
+        $data = $usd2 + ($randSecond / 10);
 
     }
 
