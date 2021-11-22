@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
       if (i > date.getHours() + i) {           //  if the counter < 10, call the loop function
         program();             //  ..  again which will trigger another 
       }                       //  ..  setTimeout()
-    }, 3000)
+    }, 10000)
   }
   
   program(); 
