@@ -2,7 +2,7 @@ const express = require('express');
 var cors = require("cors");
 const app = express();
 const date = new Date();
-let val = 101310;
+let val = 60000;
 let i=1;
 const PORT = process.env.PORT || 3000
 
@@ -20,23 +20,23 @@ app.get('/', (req, res) => {
       do{
         if(date.getHours() >= 7 && date.getHours() < 19){
           //gündüz
-          val += randomIntFromInterval(1, 6);
+          val += randomIntFromInterval(1, 5);
         }
         else{
           //gece
-          val += randomIntFromInterval(6, 12);
+          val += randomIntFromInterval(5, 10);
         }
         
         i++
   
       }
       while(i > date.getHours() + i);
-        res.json({usd: val});
+        res.json({usd: val.pad(6)});
       //  increment the counter
       if (i > date.getHours() + i) {           //  if the counter < 10, call the loop function
         program();             //  ..  again which will trigger another 
       }                       //  ..  setTimeout()
-    }, 8300)
+    }, 8400)
   }
   
   program(); 
