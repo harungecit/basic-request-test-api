@@ -2,14 +2,14 @@
 include('connection.php');
 $dateTime = new DateTime('now', new DateTimeZone('America/New_York')); 
 echo $date = $dateTime->format("H");
-$rand = rand(10, 50);
+$randSecond = rand(10, 50);
 $usd1 = rand(15,25);
 $usd2 = rand(30,50);
 $data = [];
-for($s=1; $s<=$rand;$s++){
+for($s=1; $s<=$randSecond;$s++){
     if($date > 7  && $date < 19){
         //gündüz
-        $data[$s] = 
+        $data[$s] = $usd1 + ($randSecond / 10);
 
         /*
         $list=[$username,$adddate,$saves];
@@ -20,6 +20,7 @@ for($s=1; $s<=$rand;$s++){
     }
     else{
         //gece
+        $data[$s] = $usd2 + ($randSecond / 10);
 
     }
 
