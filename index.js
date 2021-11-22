@@ -51,9 +51,11 @@ app.get('/', (req, res) => {
       */
       res.json({usd: padLeadingZeros(val, 6)});
       
+      /*
       if (i > date.getHours() + i) {
         program(); 
       }    
+      */
     }, 5000)
   }
   
