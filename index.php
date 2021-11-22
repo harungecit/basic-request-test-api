@@ -9,7 +9,7 @@ $data = [];
 for($s=1; $s<=$randSecond;$s++){
     if($date > 7  && $date < 19){
         //gündüz
-        $data[$s] = $usd1 + ($randSecond / 10);
+        $data[$randSecond] .= $usd1 + ($randSecond / 10);
 
         /*
         $list=[$username,$adddate,$saves];
@@ -20,7 +20,7 @@ for($s=1; $s<=$randSecond;$s++){
     }
     else{
         //gece
-        $data[$s] = $usd2 + ($randSecond / 10);
+        $data[$randSecond] .= $usd2 + ($randSecond / 10);
 
     }
 
