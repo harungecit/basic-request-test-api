@@ -29,9 +29,8 @@ app.get('/', (req, res) => {
         val += randomIntFromInterval(20, 30);
       }
   }
-
-  setInterval(program(), 50000);
   res.json({usd: padLeadingZeros(val, 6)});
+  setInterval(program(), 10000);
 
 });
 
