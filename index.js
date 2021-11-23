@@ -30,10 +30,14 @@ app.get('/', (req, res) => {
       }
       return i;   
   }
-  val = val + i;
+  function counter(){
+    val = val + i;
+  }
+  setInterval(counter(), 10000);
   res.json({usd: padLeadingZeros(val, 6)});
-  setInterval(program(), 30000);
+  setInterval(program(), 50000);
   
+
 
 });
 
