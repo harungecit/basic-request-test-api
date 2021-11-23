@@ -16,45 +16,27 @@ function padLeadingZeros(num, size) {
   return s;
 }
 
- 
-
 app.use(cors());
 app.get('/', (req, res) => {
 
-
   function program() { 
-    setTimeout(function() {
-      
-      do{
-        if(date.getHours() >= 7 && date.getHours() < 19){
-          //gündüz
-          val += randomIntFromInterval(1, 6);
-        }
-        else{
-          //gece
-          val += randomIntFromInterval(6, 11);
-        }
-        
-        i++
-  
+      if(date.getHours() >= 7 && date.getHours() < 19){
+        //gündüz
+        val += randomIntFromInterval(10, 20);
       }
-      while(i > date.getHours() + i);
-      
-      res.json({usd: padLeadingZeros(val, 6)});
-      
-     
-      if (i > date.getHours() + i) {
-        program(); 
-      }    
-      
-    }, 8500)
+      else{
+        //gece
+        val += randomIntFromInterval(20, 30);
+      }
+      res.json({usd: padLeadingZeros(val, 6)}); 
   }
-  
-  program(); 
+
+  setInterval(program(), 5000);
 
 });
 
 app.listen(PORT, () => {
  console.log('Uygulama çalıştırıldı...');
  console.log(date.getHours());
+ 
 });
