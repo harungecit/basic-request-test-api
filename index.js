@@ -41,5 +41,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
  console.log('Uygulama çalıştırıldı...');
  console.log(date.getHours());
- console.log(value);
+
 });
