@@ -31,13 +31,14 @@ function program() {
 app.use(cors());
 app.get('/', (req, res) => {
 
-  res.json({usd: padLeadingZeros(val, 6)});
-  setInterval(program(), 10000);
+  let value = program();
+  res.json({usd: padLeadingZeros(value, 6)});
+  //setInterval(program(), 10000);
   
 });
 
 app.listen(PORT, () => {
  console.log('Uygulama çalıştırıldı...');
  console.log(date.getHours());
- console.log(val);
+ console.log(program().val);
 });
