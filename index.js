@@ -30,14 +30,14 @@ app.get('/', (req, res) => {
       }
       return val;   
   }
-  
-  setInterval(program(), 10000);
   res.json({usd: padLeadingZeros(val, 6)});
+  setInterval(program(), 10000);
+  
 
 });
 
 app.listen(PORT, () => {
  console.log('Uygulama çalıştırıldı...');
  console.log(date.getHours());
- 
+ console.log(val);
 });
