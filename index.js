@@ -16,30 +16,24 @@ function padLeadingZeros(num, size) {
   return s;
 }
 
+function program() { 
+  if(date.getHours() >= 7 && date.getHours() < 19){
+    //gündüz
+    val += randomIntFromInterval(10, 20);
+  }
+  else{
+    //gece
+    val += randomIntFromInterval(20, 30);
+  }
+  return val;   
+}
+
 app.use(cors());
 app.get('/', (req, res) => {
 
-  function program() { 
-      if(date.getHours() >= 7 && date.getHours() < 19){
-        //gündüz
-        i = randomIntFromInterval(10, 20);
-      }
-      else{
-        //gece
-        i = randomIntFromInterval(20, 30);
-      }
-      return i;   
-  }
-  function counter(){
-    val = val + i;
-    return val;
-  }
-  setInterval(counter(), 10000);
   res.json({usd: padLeadingZeros(val, 6)});
-  setInterval(program(), 50000);
+  setInterval(program(), 10000);
   
-
-
 });
 
 app.listen(PORT, () => {
