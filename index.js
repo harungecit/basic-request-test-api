@@ -22,14 +22,15 @@ app.get('/', (req, res) => {
   function program() { 
       if(date.getHours() >= 7 && date.getHours() < 19){
         //gündüz
-        val += randomIntFromInterval(10, 20);
+        i = randomIntFromInterval(10, 20);
       }
       else{
         //gece
-        val += randomIntFromInterval(20, 30);
+        i = randomIntFromInterval(20, 30);
       }
-      return val;   
+      return i;   
   }
+  val = val + i;
   res.json({usd: padLeadingZeros(val, 6)});
   setInterval(program(), 30000);
   
