@@ -19,11 +19,13 @@ function padLeadingZeros(num, size) {
 function program() { 
   if(date.getHours() >= 7 && date.getHours() < 19){
     //gündüz
-    val += randomIntFromInterval(10, 20);
+    //val += randomIntFromInterval(1, 9);
+    val += 1;
   }
   else{
     //gece
-    val += randomIntFromInterval(20, 30);
+    val += 1;
+    //val += randomIntFromInterval(9, 18);
   }
   return val;   
 }
@@ -33,12 +35,11 @@ app.get('/', (req, res) => {
 
   let value = program();
   res.json({usd: padLeadingZeros(value, 6)});
-  //setInterval(program(), 10000);
   
 });
 
 app.listen(PORT, () => {
  console.log('Uygulama çalıştırıldı...');
  console.log(date.getHours());
- console.log(program().val);
+ console.log(value);
 });
