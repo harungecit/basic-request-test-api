@@ -2,7 +2,7 @@ const express = require('express');
 var cors = require("cors");
 const app = express();
 const date = new Date();
-let val = 156301;
+let val = 2873061;
 let i=1;
 const PORT = process.env.PORT || 3000
 
@@ -40,6 +40,4 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
  console.log('Uygulama çalıştırıldı...');
- console.log(date.getHours());
-
 });
