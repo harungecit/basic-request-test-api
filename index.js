@@ -2,7 +2,7 @@ const express = require('express');
 var cors = require("cors");
 const app = express();
 const date = new Date();
-let val = 2873061;
+let val = 287377;
 let i=1;
 const PORT = process.env.PORT || 3000
 
