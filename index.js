@@ -2,7 +2,7 @@ const express = require('express');
 var cors = require("cors");
 const app = express();
 const date = new Date();
-let val = 287377;
+let val = 386461;
 let i=1;
 const PORT = process.env.PORT || 3000
 
@@ -24,7 +24,7 @@ function program() {
   }
   else{
     //gece
-    val += 1;
+    val += 2;
     //val += randomIntFromInterval(9, 18);
   }
   return val;   
